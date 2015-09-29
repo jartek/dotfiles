@@ -1,0 +1,10 @@
+[user]
+	email = jartek.91@gmail.com
+	username = jartek
+	name = jartek
+[core]
+	editor = subl -n -w
+[push]
+	default = current
+[status]
+	short = true
