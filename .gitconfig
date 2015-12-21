@@ -8,3 +8,5 @@
 	default = current
 [status]
 	short = true
+[color]
+	ui = auto

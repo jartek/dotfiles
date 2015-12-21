@@ -60,6 +60,7 @@
 		".tmp",
 		"tmp",
 		"CVS",
+		"dist",
 		".sass-cache",
 		"node_modules",
 		"bower_components",
@@ -73,7 +74,6 @@
 		"Godeps",
 		"build"
 	],
-	"font_face": "Consolas",
 	"font_options":
 	[
 		"no_bold",
@@ -85,9 +85,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Javascript Next",
 		"jslint",
-		"RuboCop",
 		"Vintage"
 	],
 	"indent_to_bracket": true,
@@ -110,6 +108,6 @@
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
-	"word_separators": "./\\()\"'-:,.;_<>~!@#%^&*|+=[]{}`~?",
+	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?_",
 	"word_wrap": true
 }

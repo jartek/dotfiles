@@ -45,14 +45,6 @@ plugins=(git pow zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export EDITOR="subl -wa"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 alias zg="zeus generate"
 alias zd="zeus destroy"
 alias zc="zeus console"
@@ -72,17 +64,32 @@ alias gprm="git pull --rebase origin master"
 alias gl="git log --pretty=oneline --abbrev-commit --graph --decorate"
 alias gca="git commit --amend"
 alias grc="git rebase --continue"
-alias vim="mvim -v"
+alias gcdf="git clean -df"
 
+# Customize to your needs...
+export USER="jartek"
+export EDITOR="subl -wa"
+export GOPATH=$HOME/dev/go
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:$HOME/.npm"
 export PATH="$PATH:$HOME/.npm/bin"
 export PATH="$PATH:$HOME/.npm/lib"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export CC=/usr/bin/gcc
 
 export HISTFILESIZE=10000000
 
-export NVM_DIR="/Users/jartek/.nvm"
-source $(brew --prefix nvm)/nvm.sh
+command_exists () {
+  type "$1" &> /dev/null ;
+}
 
-. `brew --prefix`/etc/profile.d/z.sh
+export NVM_DIR="$HOME/.nvm"
+if command_exists brew; then source $(brew --prefix nvm)/nvm.sh; else source $HOME/.nvm/nvm.sh ; fi
+
+if command_exists brew; then . `brew --prefix`/etc/profile.d/z.sh; fi
+if command_exists rbenv; then eval "$(rbenv init -)"; fi
+
+if [ "$USERNAME" = 'vagrant' ]; then cd /vagrant; fi
