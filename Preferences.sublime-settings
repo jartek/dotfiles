@@ -66,12 +66,12 @@
 		"bower_components",
 		".bundle",
 		"test-results",
+		"Godeps",
 		"coverage",
 		"rethinkdb_data",
 		".vagrant",
 		".chef",
 		"log",
-		"Godeps",
 		"build"
 	],
 	"font_options":

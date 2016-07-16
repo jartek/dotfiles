@@ -10,3 +10,5 @@
 	short = true
 [color]
 	ui = auto
+[help]
+	autocorrect = 1
