@@ -1,0 +1,24 @@
+
+** 2016-07-18 08:35:20.671597 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2016-07-18 08:39:30.916107 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2016-07-18 08:43:29.386777 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2016-07-18 08:43:34.735021 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"/usr/local/Cellar/go/1.6.2/libexec/pkg/darwin_amd64:/Users/jartek/src/pkg/darwin_amd64", GOOS:"darwin", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/local/Cellar/go/1.6.2/libexec", GOPATH:"/Users/jartek/src", InstallSuffix:""}
+Gocode pkg: "github.com/jartek"
+Gocode env: gocode.margoEnv{LibPath:"/usr/local/Cellar/go/1.6.2/libexec/pkg/darwin_amd64:/Users/jartek/dev/pkg/darwin_amd64", GOOS:"darwin", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/local/Cellar/go/1.6.2/libexec", GOPATH:"/Users/jartek/dev", InstallSuffix:""}

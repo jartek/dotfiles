@@ -1,0 +1,6 @@
+{
+  "env": {
+    "GOPATH": "$HOME/dev"
+  },
+  "fmt_cmd": ["goimports"]
+}
