@@ -69,7 +69,7 @@ alias gcdf="git clean -df"
 # Customize to your needs...
 export USER="jartek"
 export EDITOR="subl -wa"
-export GOPATH=$HOME/dev/go
+export GOPATH=$HOME/src
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
