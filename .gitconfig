@@ -1,14 +1,25 @@
 [user]
-	email = jartek.91@gmail.com
-	username = jartek
-	name = jartek
-[core]
-	editor = subl -n -w
+  name = jartek
+  username = jartek
+  email = jartek.91@gmail.com
+[pull]
+  rebase = true
 [push]
-	default = current
-[status]
-	short = true
+  default = current
+[rebase]
+  autosquash = true
+  autostash = true
+[github]
+  user = jartek
+[rerere]
+  enabled = true
+[core]
+  excludesfile = ~/.gitignore_global
 [color]
-	ui = auto
+  ui = true
+[status]
+  short = true
 [help]
-	autocorrect = 1
+  autocorrect = 1
+[core]
+  editor = code
