@@ -22,4 +22,8 @@
 [help]
   autocorrect = 1
 [core]
-  editor = code
+  editor = vim
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
