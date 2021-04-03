@@ -1,4 +1,6 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+export ZPLUG_HOME=`brew --prefix`/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 ZSH=$HOME/.oh-my-zsh
@@ -18,6 +20,7 @@ export GOPATH="$HOME/go"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:$HOME/.npm"
@@ -28,7 +31,7 @@ export HISTFILESIZE=10000000
 export NVM_DIR="$HOME/.nvm"
 
 source $(brew --prefix nvm)/nvm.sh
-. `brew --prefix`/etc/profile.d/z.sh
+. ~/.z-script/z.sh
 eval "$(rbenv init - --no-rehash)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -37,8 +40,6 @@ zplug clear
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
-zplug "paulmelnikow/zsh-startup-timer"
-zplug "tysonwolker/iterm-tab-colors"
 zplug "jimeh/zsh-peco-history"
 zplug "plugins/git", from:oh-my-zsh
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
@@ -58,7 +59,7 @@ fi
 
 zplug load
 
-alias gac="git add -A;git commit -m $1"
+alias gac="git add -A;git cz"
 alias p="git push"
 alias brewup="brew  update && brew upgrade --all"
 alias gprune="git branch --merged master | grep -v 'master$' | xargs git branch -d"
@@ -70,6 +71,7 @@ alias gca="git commit --amend"
 alias grc="git rebase --continue"
 alias gcdf="git clean -df"
 alias dcup="docker-compose up"
+alias open="explorer.exe"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -83,3 +85,12 @@ alias dcup="docker-compose up"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jartek/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk/bin:$PATH"
+
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+#export LIBGL_ALWAYS_INDIRECT=1
+export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+export LIBGL_ALWAYS_INDIRECT=1
+# sudo /etc/init.d/dbus start &> /dev/null
+
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin

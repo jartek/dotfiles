@@ -1,7 +1,8 @@
 [user]
   name = jartek
   username = jartek
-  email = jartek.91@gmail.com
+	email = 2030949+jartek@users.noreply.github.com
+	signingkey = 22DDAC01401BE77D
 [pull]
   rebase = true
 [push]
